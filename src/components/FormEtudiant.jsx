@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function FormulaireEtudiant({titre,valeursInitiales,onSubmit}){
+export default function FormEtudiant({titre,valeursInitiales,onSubmit}){
   const [form,setForm] = useState(valeursInitiales);
   const [erreur,setErreur] = useState("");
   const changer = (e) => setForm({...form,[e.target.name]: e.target.value});

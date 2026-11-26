@@ -4,13 +4,13 @@ import FormEtudiant from "../components/FormEtudiant";
 
 export default function Ajouter(){
   const {ajouter} = useApp();
-  const navigate = useNavigate();
+  const naviguer = useNavigate();
 
   return (
     <FormEtudiant titre="Ajouter un étudiant" valeursInitiales={{nom :"",email : "",filiere : "" }}
       onSubmit={(donnees) => {
         ajouter(donnees);
-        navigate("/etudiants");
+        naviguer("/etudiants");
       }}
     />
   );

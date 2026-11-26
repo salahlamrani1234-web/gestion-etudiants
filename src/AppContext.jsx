@@ -16,7 +16,7 @@ function Lire(cle,defaut) {
     }
 }
 
-export function AppProvider({children}){
+export function AppFournisseur({children}){
     const [user,setUser] = useState(() => Lire("user",null));
     const [etudiants,setEtudiants] = useState(Lire("etudiants",Donnees_Initiales));
         useEffect(() => {
@@ -41,10 +41,10 @@ export function AppProvider({children}){
     const supprimer = (id) => setEtudiants(etudiants.filter((e) => e.id !== id));
 
 return(
-    <AppContext.Provider value={{user, login, logout,etudiants, 
+    <AppContext.Fournisseur value={{user, login, logout,etudiants, 
     ajouter, modifier, supprimer}}>
         {children}
-    </AppContext.Provider>
+    </AppContext.Fournisseur>
 );
 }
 export const useApp=() => useContext(AppContext);

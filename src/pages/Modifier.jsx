@@ -5,7 +5,7 @@ import FormEtudiant from "../components/FormEtudiant.jsx";
 export default function Modifier(){
   const {id} = useParams();
   const {etudiants,modifier } = useApp();
-  const navigate = useNavigate();
+  const naviguer = useNavigate();
   const etudiant = etudiants.find((e) => e.id === Number(id));
 
   if(!etudiant) return <p>Étudiant introuvable.</p>;
@@ -14,7 +14,7 @@ export default function Modifier(){
     <FormEtudiant titre="Modifier l'étudiant" valeursInitiales={etudiant}
       onSubmit={(donnees) => {
         modifier(etudiant.id,donnees);
-        navigate("/etudiants");
+        naviguer("/etudiants");
       }}
     />
   );

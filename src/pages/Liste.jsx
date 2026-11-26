@@ -8,7 +8,7 @@ export default function Liste(){
   const resultat = etudiants.filter((e) =>
     e.nom.toLowerCase().includes(recherche.toLowerCase())
   );
-  const ConfirnerSuppression = (etudiant) => {
+  const ConfirmerSuppression = (etudiant) => {
     if(window.confirm(`Supprimer ${etudiant.nom} ?`)){
       supprimer(etudiant.id);
     }
@@ -36,7 +36,7 @@ export default function Liste(){
            <td>
             <Link to={`/etudiants/${e.id}`}>Voir details</Link>{" "}
             <Link to={`/etudiants/${e.id}/modifier`}>Modifier</Link>{" "}
-            <button onClick={() => ConfirnerSuppression(e)}>Supprimer</button>
+            <button onClick={() => ConfirmerSuppression(e)}>Supprimer</button>
            </td>
           </tr>
           ))}

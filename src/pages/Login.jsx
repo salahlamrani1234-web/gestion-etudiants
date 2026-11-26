@@ -3,15 +3,15 @@ import {useNavigate} from "react-router-dom";
 import {useApp} from "../AppContext";
 
 export default function Login() {
-  const { login } = useApp();
-  const navigate = useNavigate();
+  const {login} = useApp();
+  const naviguer = useNavigate();
   const [identifiant,setIdentifiant] = useState("");
   const [motDePasse,setMotDePasse] = useState("");
   const [erreur,setErreur] = useState("");
   const envoyer = (e) => {
     e.preventDefault();
     if(login(identifiant,motDePasse)) {
-      navigate("/dashboard");
+      naviguer("/dashboard");
     } else {
       setErreur("Identifiant ou mot de passe incorrect");
     }

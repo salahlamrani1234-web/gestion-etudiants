@@ -3,10 +3,10 @@ import {useApp} from "../AppContext";
 
 export default function Navbar(){
     const {user,logout} = useApp();
-    const navigate = useNavigate();
+    const naviguer = useNavigate();
     const deconnecter=() => {
       logout();
-      navigate("/");
+      naviguer("/");
     };
     
     return(
