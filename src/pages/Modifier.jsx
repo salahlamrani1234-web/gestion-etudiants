@@ -1,6 +1,6 @@
 import {useNavigate,useParams} from "react-router-dom";
 import {useApp} from "../AppContext";
-import FormEtudiant from "../components/FormEtudiant";
+import FormEtudiant from "../components/FormEtudiant.jsx";
 
 export default function Modifier(){
   const {id} = useParams();
