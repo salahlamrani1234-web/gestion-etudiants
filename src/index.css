@@ -47,6 +47,9 @@ body{
   text-decoration: none; 
   cursor: pointer; 
 }
+.btn:hover { opacity: 0.9; }
+.btn-secondaire { background: #fff; color: #810000; border: 1px solid #810000; }
+.btn-secondaire:hover { background: #e8edff; opacity: 1; }
 
 .Formulaire{ 
   max-width: 360px; 

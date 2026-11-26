@@ -16,8 +16,9 @@ export default function Detail(){
       <p>{etudiant.email}</p>
       <p>{etudiant.filiere}</p>
       <Link to="/etudiants">
-      <Link to={`/etudiants/${etudiant.id}/modifier`} className="btn">Modifier</Link>
-      {" "}← Retour</Link>
+        <Link to={`/etudiants/${etudiant.id}/modifier`} className="btn">Modifier</Link>
+        <Link to="/etudiants" className="btn btn-secondaire">← Retour</Link>
+      </Link>
     </div>
   );
 }
